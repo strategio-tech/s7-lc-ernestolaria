@@ -5,15 +5,23 @@ import java.util.Scanner;
 public class LoanCalculator {
 
     /**
-     * TODO: finish out this JavaDoc comment block.
-     * FIXME: WHAT DOES THIS METHOD DO?
+     *
+     * Takes the owned amount
+     * finds the 10% of that amount
+     * subtract it from the owned amount
+     * repeat the process 3 times
      * 
-     * @param ???
-     * @return ???
+     * @param amount owned
+     * @return amount owned after 3 months
      */
     static int getRemainingAmountIn3Months(int amount) {
-        // TODO: Rewrite this method
-        return -1;
+
+        for(int i=0; i<3; i++) {
+            int percent = (int)(amount * (10.0f / 100.0f));
+            amount-=percent;
+        }
+
+        return amount;
     }
 
     public static void main(String[] args) {
